@@ -1,0 +1,12 @@
+body{
+    background-color: #ffffff;
+}
+.header{
+    padding: left 100% ;
+    font-size:20px;
+    background-color: lightblue;
+}
+.form{
+    margin: 5px auto;
+    text-align: center;
+}
