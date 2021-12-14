@@ -28,7 +28,7 @@
 
 <body>
 <div class="navbar">
-  <a href="index.php">Αρχική</a>
+  <a href="index.php">Πίσω</a>
   <a href="logout.php" style="float:right;">Αποσύνδεση</a>
 </div>
 </body>
