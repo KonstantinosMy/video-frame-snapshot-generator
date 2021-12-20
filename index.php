@@ -111,6 +111,9 @@
         $name = $row['name'];
         $videoFile = "C:/xampp/htdocs/videoUploadPlatform/$location"; 
         $frameDir = "/frames/$name";
+        if (!is_dir('frames/'.$name)) {
+          mkdir('frames/'.$name, 0777, true);
+      }
         $imgOut = "C:/xampp/htdocs/videoUploadPlatform/frames/$name/$name-%4d.jpeg"; 
         $second = 4;  
         # I am file1.php
@@ -122,8 +125,9 @@
             <br>
             <span>Name:".$name."<br>",'Path:' .$location."</span>
             <a href='getFrames.php'>
-              <input onclick='' type='button' class='btnFrame' name='getFrames' value='Προβολή Καρέ'>
+              <input id='butt' onclick='' type='button' class=$name name='getFrames' value='Προβολή Καρέ'>
             </a>
+            
             
           </div>";
             $cmd = $ffmpeg." -i \"".$videoFile."\"  -qscale:v 2 -r 10.0 \"".$imgOut."\" 2>&1";
